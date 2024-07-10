@@ -26,12 +26,14 @@ model User {
 }
 
 model Member {
-  id        Int       @id @default(autoincrement())
-  code      String?   @unique(map: "code") @db.VarChar(255)
-  name      String?   @db.VarChar(255)
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @updatedAt
-  deletedAt DateTime? @db.Timestamp(0)
+  id         Int       @id @default(autoincrement())
+  code       String?   @unique(map: "code") @db.VarChar(255)
+  name       String?   @db.VarChar(255)
+  penaltyEnd DateTime? @db.Timestamp(0)
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
+  deletedAt  DateTime? @db.Timestamp(0)
+  rentals    Rental[]
 
   @@map("members")
 }
@@ -45,6 +47,20 @@ model Book {
   createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
   deletedAt DateTime? @db.Timestamp(0)
+  rentals   Rental[]
 
   @@map("books")
+}
+
+model Rental {
+  id         Int       @id @default(autoincrement())
+  memberId   Int
+  bookId     Int
+  borrowedAt DateTime? @default(now())
+  returnedAt DateTime?
+
+  book   Book   @relation(fields: [bookId], references: [id])
+  member Member @relation(fields: [memberId], references: [id])
+
+  @@map("rentals")
 }
