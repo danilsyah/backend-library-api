@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator');
 const prisma = require('../prisma/client');
 const bcrypt = require('bcryptjs');
 
-// function findUsers
+// function menampilkan semua data users
 const findUsers = async (req, res) => {
     try {
         // get all users from database
@@ -32,7 +32,7 @@ const findUsers = async (req, res) => {
     }
 }
 
-// function createUser
+// function create new users
 const createUser = async (req, res) => {
     // periksa hasil validasi
     const errors = validationResult(req);
@@ -105,7 +105,7 @@ const findUserById = async (req, res) => {
     }
 }
 
-// function updateUser
+// function update data user by id
 const updateUser = async (req, res) => {
     // get ID from params
     const { id } = req.params;
@@ -153,7 +153,7 @@ const updateUser = async (req, res) => {
 };
 
 
-// function deleteUser
+// function delete user by id
 const deleteUser = async (req, res) => {
     // get ID from params
     const { id } = req.params;

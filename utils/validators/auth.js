@@ -6,7 +6,7 @@ const prisma = require('../../prisma/client');
 
 // Definisikan validasi untuk register
 const validateRegister = [
-    body('name').notEmpty().withMessage('Name is required'),
+    body('name').notEmpty().withMessage('Name is requireddddddddddd cuy'),
     body('email')
         .notEmpty().withMessage('Email is required')
         .isEmail().withMessage('Email is invalid')
@@ -20,13 +20,13 @@ const validateRegister = [
             }
             return true;
         }),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+    body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters long'),
 ];
 
 //definisikan validasi untuk login
 const validateLogin = [
     body('email').notEmpty().withMessage('Email is required'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+    body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters long'),
 ];
 
 module.exports = { validateRegister, validateLogin };
