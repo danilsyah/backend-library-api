@@ -70,3 +70,10 @@ using nodemon
     
 
 ![alt text](image.png)
+
+### deploy menggunakan docker 
+
+ $ docker build -t backendborrow:v2 .
+ $ docker compose build
+ $ docker swarm init 
+ $ docker stack deploy --compose-file docker-compose.yml backend-api
