@@ -3,7 +3,7 @@
   "info": {
     "title": "Library API",
     "version": "1.0.0",
-    "description": "Documentation Borrow Books API"
+    "description": "Documentation Borrow Books API Terbaru"
   },
   "components": {
     "securitySchemes": {
@@ -488,11 +488,11 @@
                     "stock": {
                       "type": "integer"
                     },
-                    "createdAt":{
+                    "createdAt": {
                       "type": "string",
                       "format": "date-time"
                     },
-                    "updatedAt":{
+                    "updatedAt": {
                       "type": "string",
                       "format": "date-time"
                     }
@@ -618,7 +618,7 @@
                     "updatedAt": {
                       "type": "string",
                       "format": "date-time"
-                    }       
+                    }
                   }
                 }
               }
@@ -630,6 +630,5 @@
         }
       }
     }
-    
   }
 }
