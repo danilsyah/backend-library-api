@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Borrow Books API",
+    "title": "Borrow Books Restful-API",
     "version": "1.2.0",
     "description": "Documentation Borrow Books API v1.2.0",
     "author": "Danil Syah Arihardjo"
