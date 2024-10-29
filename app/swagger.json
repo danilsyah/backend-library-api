@@ -3,7 +3,8 @@
   "info": {
     "title": "Borrow Books API",
     "version": "1.2.0",
-    "description": "Documentation Borrow Books API v1.2.0"
+    "description": "Documentation Borrow Books API v1.2.0",
+    "author": "Danil Syah Arihardjo"
   },
   "components": {
     "securitySchemes": {
