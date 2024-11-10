@@ -67,9 +67,7 @@ using nodemon
 
     http://ip-address:3000/api-docs/
 
-    
 
-![alt text](image.png)
 
 ### deploy menggunakan docker 
 
@@ -77,3 +75,6 @@ using nodemon
         $ docker compose build
         $ docker swarm init 
         $ docker stack deploy --compose-file docker-compose.yml backend-api
+
+
+![alt text](image.png)
